@@ -1,5 +1,6 @@
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy.orm import Session
+from starlette.middleware.cors import CORSMiddleware
 
 import crud
 import models
@@ -9,6 +10,23 @@ from models import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+# allow all origins
+origins = [
+    "*",  # Allows all origins
+    # You can also specify specific domains like:
+    # "https://tonybnya-quote-generator.onrender.com",
+    # "http://localhost:5173",  # For local development
+]
+
+# Add CORSMiddleware to your FastAPI app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Or specify a list of allowed origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allow all headers
+)
 
 
 # dependency to get the database session
