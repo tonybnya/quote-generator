@@ -1,0 +1,83 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node.js dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# React build directories
+/build
+/.cache
+
+# FastAPI
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+instance/
+.venv/
+*.env
+*.env.*
+
+# Docker
+docker-compose.override.yml
+Dockerfile.dev
+Dockerfile
+*.yml
+
+# Nginx
+*.conf
+
+# Test coverage
+coverage/
+
+# Python virtual environment
+.env/
+.venv/
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# Pytest
+*.cover
+*.log
+nosetests.xml
+coverage.xml
+*.hypothesis/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# NPM
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Misc
+.idea
+*.bak
+*.swp
