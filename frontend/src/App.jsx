@@ -13,7 +13,6 @@ const App = () => {
   const [loading, setLoading] = useState(false);
 
   const API_URL = import.meta.env.VITE_API_URL;
-  console.log(API_URL);
 
   // effect to fetch the data when the component mounts
   useEffect(() => {
@@ -40,7 +39,6 @@ const App = () => {
       // update the state with the fetched data
       setData(result);
       // log the fetched data in the console
-      console.log(result);
     } catch (error) {
       // update the error state
       setError(error.message);

@@ -13,10 +13,12 @@ app = FastAPI()
 
 # allow all origins
 origins = [
-    "*",  # Allows all origins
-    # You can also specify specific domains like:
-    # "https://tonybnya-quote-generator.onrender.com",
-    # "http://localhost:5173",  # For local development
+    # allows all origins
+    # "*",
+    # my frontend
+    "https://tonybnya-quote-generator.onrender.com",
+    # For local development
+    "http://localhost:5173",
 ]
 
 # Add CORSMiddleware to your FastAPI app
